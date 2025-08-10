@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Language" content="en-us" />
+<title>The Official 404: File Not Found Home Page</title>
+<link rel="shortcut icon" href="https://ico.blackjester.com/404FNF.ico">
+   <script language="Javascript">
+   function floodprotect() {
+      alert("Floodprotect active, please try later!");
+   }
+   </script>
+</HEAD>
+<BODY BGCOLOR="NAVY" TEXT="YELLOW" LINK="YELLOW" VLINK="BLACK">
+<A HREF="/">Return To Site</A><BR>
+<CENTER><iframe src="https://store.steampowered.com/widget/890470/" frameborder="0" width="646" height="190" align="center"></iframe><BR>
+
+Welcome To The Official 404: File Not Found Home Page
+<BR><!--#echo var="REQUEST_URI" --> Not Found
+<P></P>
+<P></P>
+<BR>
+Check the Official File Not Found Project at this <A HREF="https://github.com/blackmagusoft">Github</A>
+
+<!--#echo var="HTTP_REFERER" -->
+<!--#echo var="HTTP_USER_AGENT" -->
+<!--#echo var="REMOTE_ADDR" -->
+<!--#echo var="REDIRECT_STATUS" -->
+
+<P>
+<A HREF="https://playasia.mentalmidgetslayer.com/" target="_tab">Play-Asia Search</A>:<BR>
+<form method="get" target="_new_pa" action="https://www.play-asia.com/">
+<input type="hidden" name="search_box" value=1>
+<input type="hidden" name="affiliate_id" value="1515117">
+<input type="hidden" name="page" value=25>
+<input type="text" name="p_query" value="">
+<input type="submit" name="submit" value="go">
+</form></P>
+</CENTER>
+<script type="text/javascript" src="https://refjs.blacknagusoft.com/referrrer.js">
+</script>
+<?php
+	function pa_convert_link( $_link )
+	{
+		$parts = parse_url( $_link );
+		print_r( $parts );
+		$query = Array();
+		parse_str( $parts[ 'query' ], $query );
+		$query[ 'tagid' ] = 1515117;
+		$query = http_build_query( $query );
+
+		$_link = "$parts[scheme]://$parts[host]$parts[path]?$query";
+		if ( isset( $parts[ 'fragment' ] ) )
+			$_link .= "#$parts[fragment]";
+
+
+		return $_link;
+	}
+?>
+
+</body>
+</html>
