@@ -1,1 +1,0 @@
-Aren't cows erotic?
